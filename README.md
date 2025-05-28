@@ -81,6 +81,119 @@ cargo build --release
 
 # Set Configrations
 
+```
+rm -rf $HOME/0g-storage-node/run/config.toml
+```
+
+```
+curl -o $HOME/0g-storage-node/run/config.toml https://raw.githubusercontent.com/Mayankgg01/0G-Storage-Node-Guide/main/config.toml
+```
+
+
+* Add Your Wallet's Private KEY in `config.toml`, ❗❗Dont Add **0X** before the key:
+
+-open and go to `miner_key` and add your pvt key:
+
+```
+nano $HOME/0g-storage-node/run/config.toml
+```
+
+![image](https://github.com/user-attachments/assets/a513812f-177e-4a74-83a9-1548c98f4556)
+
+
+# If u want to change RPC then follow this:
+
+1. get rpc from here - https://www.astrostake.xyz/0g-status
+
+2. Chooose any rpc and edit in the `config.toml` file
+
+![image](https://github.com/user-attachments/assets/44b682a5-45ce-4fc8-8c3a-7f2355f3b9ac)
+
+
+# Create a Systemd Service File
+
+```
+sudo tee /etc/systemd/system/zgs.service > /dev/null <<EOF
+[Unit]
+Description=ZGS Node
+After=network.target
+
+[Service]
+User=$USER
+WorkingDirectory=$HOME/0g-storage-node/run
+ExecStart=$HOME/0g-storage-node/target/release/zgs_node --config $HOME/0g-storage-node/run/config.toml
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+* Reload
+
+```
+sudo systemctl daemon-reload
+```
+
+* Enable
+
+```
+sudo systemctl enable zgs
+```
+
+* Start service
+
+```
+sudo systemctl start zgs
+```
+
+
+# Managing Logs
+
+```
+sudo systemctl status zgs
+```
+
+![Screenshot 2025-05-27 190436](https://github.com/user-attachments/assets/3b01ab3f-8d43-43b3-9bf1-b2a8e870e1fe)
+
+
+* check Full Logs
+
+```
+tail -f ~/0g-storage-node/run/log/zgs.log.$(TZ=UTC date +%Y-%m-%d)
+```
+
+* Check block & Sync process - Match to the latest block on explorer
+
+```
+ while true; do     response=$(curl -s -X POST http://localhost:5678 -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"zgs_getStatus","params":[],"id":1}');     logSyncHeight=$(echo $response | jq '.result.logSyncHeight');     connectedPeers=$(echo $response | jq '.result.connectedPeers');     echo -e "logSyncHeight: \033[32m$logSyncHeight\033[0m, connectedPeers: \033[34m$connectedPeers\033[0m";     sleep 5; done
+```
+
+![Screenshot 2025-05-28 155703](https://github.com/user-attachments/assets/ab97078b-2c2a-4328-aace-bc94982ab802)
+
+
+# Stop & Delete the service
+
+```
+sudo systemctl stop zgs
+```
+
+```
+sudo systemctl disable zgs
+sudo rm /etc/systemd/system/zgs.service
+rm -rf $HOME/0g-storage-node
+```
+
+👉 Join TG for more Updates: https://telegram.me/cryptogg
+
+If U have any issue then open a issue on this repo or Dm me on TG~
+
+Thank U! 👾
+
+Happy Coding📈
+
 
 
 
