@@ -186,6 +186,21 @@ sudo rm /etc/systemd/system/zgs.service
 rm -rf $HOME/0g-storage-node
 ```
 
+
+
+# Explorer & Useful Webs
+
+* Explorer- (View your txs)
+
+https://chainscan-galileo.0g.ai/
+
+* View Miner Details- (Add your wallet address at the end of the link)
+
+https://storagescan-galileo.0g.ai/miner/
+
+
+/////////////////////////////////////////////////////////////
+
 👉 Join TG for more Updates: https://telegram.me/cryptogg
 
 If U have any issue then open a issue on this repo or Dm me on TG~
