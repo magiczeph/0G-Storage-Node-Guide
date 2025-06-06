@@ -194,15 +194,13 @@ rm -rf $HOME/0g-storage-node
 
 * View Miner Details- (Add your wallet address at the end of the link): https://storagescan-galileo.0g.ai/miner/
 
-/////////////////////////////////////////////////////////////
+DONE!!
 
 👉 Join TG for more Updates: https://telegram.me/cryptogg
 
 If U have any issue then open a issue on this repo or Dm me on TG~
 
-Thank You! 
-
-Happy Coding📈
+Thank You! Happy Coding!📈
 
 
 
