@@ -66,11 +66,11 @@ go version
 # Clone the Repository
 
 ```
-git clone -b v0.8.7 https://github.com/0glabs/0g-storage-node.git
+git clone https://github.com/0glabs/0g-storage-node.git
 ```
 
 ```
-cd 0g-storage-node
+cd 0g-storage-node && git checkout v1.0.0 && git submodule update --init
 ```
 
 * Build in release mode 
