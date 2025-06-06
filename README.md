@@ -190,13 +190,14 @@ rm -rf $HOME/0g-storage-node
 
 # Explorer & Useful Webs
 
-* Explorer- (View your txs)
-
-https://chainscan-galileo.0g.ai/
+* Explorer- (View your txs - Paste Your Address)
+  
+- https://chainscan-galileo.bangcode.id/ 
+- https://chainscan-galileo.0g.ai/
 
 * View Miner Details- (Add your wallet address at the end of the link)
 
-https://storagescan-galileo.0g.ai/miner/
+- https://storagescan-galileo.0g.ai/miner/
 
 
 /////////////////////////////////////////////////////////////
@@ -205,7 +206,7 @@ https://storagescan-galileo.0g.ai/miner/
 
 If U have any issue then open a issue on this repo or Dm me on TG~
 
-Thank U! 👾
+Thank You! 
 
 Happy Coding📈
 
