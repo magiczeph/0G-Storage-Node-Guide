@@ -1,3 +1,10 @@
+# my edit: #
+# Explorer- (View your txs - Paste Your Address): https://chainscan-galileo.bangcode.id/ OR https://chainscan-galileo.0g.ai/
+
+# View Miner Details- (Add your wallet address at the end of the link): https://storagescan-galileo.0g.ai/miner/
+
+
+
 <div align="left">
 
 #   **Introduction📔**
