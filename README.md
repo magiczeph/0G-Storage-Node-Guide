@@ -3,8 +3,9 @@
 Explorer- (View your txs - Paste Your Address): https://chainscan-galileo.bangcode.id/ OR https://chainscan-galileo.0g.ai/                                      
 View Miner Details- (Add your wallet address at the end of the link): https://storagescan-galileo.0g.ai/miner/
 
-~step 2
-Check block & Sync process - Match to the latest block on explorer (baki is command se dekho agar block aarehe h to node chal rha h)                          
+~step 2 ( baki is command se dekho agar block aarehe h to node chal rha h ) 
+
+Check block & Sync process - Match to the latest block on explorer                    
 ```
  while true; do     response=$(curl -s -X POST http://localhost:5678 -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"zgs_getStatus","params":[],"id":1}');     logSyncHeight=$(echo $response | jq '.result.logSyncHeight');     connectedPeers=$(echo $response | jq '.result.connectedPeers');     echo -e "logSyncHeight: \033[32m$logSyncHeight\033[0m, connectedPeers: \033[34m$connectedPeers\033[0m";     sleep 5; done
 ```
