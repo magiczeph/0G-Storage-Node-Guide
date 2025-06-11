@@ -1,6 +1,7 @@
 # my edit: 
 ~step 0 ( isse check kro active or running h to done )                                     
-```sudo systemctl status zgs
+```
+sudo systemctl status zgs
 ```
 
 ~step 1 ( in dono se apne node chek kr sakte ho sahi chal rha ki ni )                                                                                            
