@@ -1,14 +1,15 @@
 # my edit: 
-~step 0 ( isse check kro active or running h to done )                                     
+
+💠 step 0 ( isse check kro active or running h to done )                                     
 ```
 sudo systemctl status zgs
 ```
 
-~step 1 ( in dono se apne node chek kr sakte ho sahi chal rha ki ni )                                                                                            
+💠 step 1 ( in dono se apne node chek kr sakte ho sahi chal rha ki ni )                                                                                            
 Explorer- (View your txs - Paste Your Address): https://chainscan-galileo.bangcode.id/ OR https://chainscan-galileo.0g.ai/                                      
 View Miner Details- (Add your wallet address at the end of the link): https://storagescan-galileo.0g.ai/miner/
 
-~step 2 ( baki is command se dekho agar block aarehe h to node chal rha h ) 
+💠 step 2 ( baki is command se dekho agar block aarehe h to node chal rha h ) 
 
 Check block & Sync process - Match to the latest block on explorer                    
 ```
